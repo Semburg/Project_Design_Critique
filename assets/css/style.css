@@ -181,7 +181,6 @@ header li{
     margin: 5px 0;
     margin-top: 15px;
     font-size: 3em;
-    font-family:TiemposHeadline-Semibold;
     font-family:Graphik-Regular;
 }
 
@@ -203,7 +202,7 @@ header li{
 }
 
 /* !            FITTING THE GRID CELL by IMG */
-/* ?        ANY other METHOD TO MAKE IT AUTOMATICALLY for images  -  autofit/autofill/etc */
+/* ?        ANY other METHOD TO MAKE IT AUTOMATICALLY for images  -  autofit/autofill/etc ?*/
 #trd_sec img{
     width: 40vw;
 }
@@ -255,7 +254,7 @@ header li{
 /* ************   4d - SECTION   GRID */
 
 #four_section{
-    width: 84vw;                        /*!   WIDTH DEFINER FOR BG*/
+    width: 84vw;                        /*!   WIDTH DEFINER FOR Background*/
     height: 60vh;                       /*!   HIGHT DEFINER FOR BG*/
     background: #ececf0;
     margin-left: 8vw;
@@ -265,9 +264,6 @@ header li{
     display: grid;
     grid-template-columns: 1fr 1fr;  /* !  FOR THE IMG   50% from 84!!   - see width of section */
     grid-template-rows: 50% 50%;
-    /* justify-items: center;
-    align-items: center; */
-
 }
 
 #four_section img{  
@@ -286,12 +282,14 @@ header li{
     grid-row: 2/3;
     padding-left: 3vw;
     padding-top: 20px;
+    margin-top: 1px;
 }
 #four_section article:nth-of-type(3){
     display: inline-block;
     /* width: 40vw; */
     grid-column: 2/3;
     grid-row: 1/3;
+
 }
 
 #four_section h2{
@@ -340,15 +338,16 @@ header li{
     margin-bottom: 14vh;
 }
 
+#fifth_sec article:nth-of-type(2) img{
+    width: 100vw;
+}
+
 #float_div img{
     width: 400px;
 }
 
 #float_div{
-    /* width: 40vw; */
-    /*position: absolute;    
-    display: flex;
-    justify-content: space-between; */
+
     text-align: left;
     padding-left: 330px;
     position: relative;
@@ -419,8 +418,258 @@ footer section h2{
 }
 
 
+/* ************************** */
+/* *        MEDIA QUERIES       */
+/* ************************** */
+
+
+/* ?            955PX            */
+
+@media only screen and (max-width:955px){
+    #first_sec h1{
+        font-size: 2em;
+    } 
+
+
+    #trd_sec article{
+        width: 80vw;
+    }
+
+    #trd_sec article:nth-of-type(1){
+        width: 70vw;
+        text-align: center;
+    }
+
+    #fifth_sec{
+        margin-top: 100px;
+    }
+
+    #float_img img{
+        display: inline-block;
+        width: 450px;
+    }
+    
+    #float_img{
+        position: absolute;
+        top:-90px;
+        left: 390px;
+        overflow: hidden;
+    }
+
+    #float_div {
+
+        text-align: left;
+        padding-left: 130px;
+        position: relative;
+    }
+}
+
+/* ?            870PX            */
+
+
+@media only screen and (max-width:955px){
+    header{
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        /* width: 90vw; */
+    
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        height: 50vh;
+    
+    }
+    
+    #head_wrapper{
+        width: 85vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* align-items: center; */
+        /* flex-basis: auto; */
+    }
+
+    header ul{
+        list-style: none;
+        padding: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+    
+    }
+    header h2{
+        /* padding-left: -5vw; */
+        /* width: 20vw; */
+        padding-right: 0px;
+        font-size: 1.8em;
+        height: 10vw;
+    }
+    
+    
+    header li{
+        display: inline-block;
+        padding-right: 15px;
+    }
+
+    #first_sec h1{
+        font-size: 2em;
+        width: 80vw;
+        text-align: center;
+    } 
+
+}
 
 
 
+/* ?            600PX            */
 
 
+@media only screen and (max-width:600px){
+
+
+#snd_sec{
+    display:  flex;
+    justify-content: flex-start;
+    margin-top: 60px;
+    margin-left: 8vw;
+}
+
+#snd_sec > p{
+    font-size: 1.1em;
+    line-height: 120%;
+}
+
+#snd_sec div{
+    padding-left: 5vw;
+   
+}
+
+#snd_sec div h1{
+    padding: 0;
+    margin: 0;
+    margin: 5px 0;
+    margin-top: 55px;
+}
+
+#four_section{
+    width: 84vw;                        
+    height: 90vh;                       
+    margin-top: 90px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+}
+
+#four_section img{  
+    display: inline-block;     
+    width: 58vw;   
+    padding-left: 15vw;             
+}
+
+#four_section h2{
+    font-size: 2.3em;
+    color: #27282A;
+    margin-top: 0;
+    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+}
+
+#four_section p, #four_section li {
+    margin-top: 10px;
+    color:#848689;
+    font-size: 1.1em;
+}
+#four_section li{line-height: 100%;}
+
+#fifth_sec{
+    margin-top: 70px;
+}
+
+#float_img img{
+    width: 350px;
+}
+
+#float_img{
+    position: absolute;
+    top:-190px;
+    left: 190px;
+    overflow: hidden;
+}
+
+}
+
+/* ?            390px   Mobile           */
+
+
+@media only screen and (max-width:600px){
+    header{
+        height: 100vh;
+    }
+    
+    #head_wrapper{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+
+
+        /* align-items: center; */
+        /* flex-basis: auto; */
+    }
+
+    #trd_sec{
+        margin-top: 50px;
+        margin-left: 8vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    }
+
+    #trd_sec img{
+        width: 40vw;
+    }
+
+    #trd_sec article{
+        width: 80vw;
+    }
+
+    #trd_sec article:nth-of-type(1){
+        width: 70vw;
+        text-align: center;
+    }
+        
+    #trd_sec h2{
+        font-size: 2.3em;
+        color: #27282A;
+        margin-top: 0;
+        /* margin-bottom: 10px; */
+    }
+    
+    #trd_sec h4{
+        margin-top: 10px;
+    }
+    #trd_sec p{
+        margin-top: 10px;
+        color:#848689;
+    }
+
+    #fifth_sec article:first-of-type{
+        text-align: center;
+        width: 80vw;
+    }
+
+    #fifth_sec article:first-of-type p {
+        width: 80vw;
+        padding-left: 10vw;
+        /* text-align: center; */
+    
+    }
+
+}
